@@ -791,7 +791,7 @@ function Header(key,value) {
     var episodeObject; 
     var output = [];
 
-    var episodeList = document.querySelector('.Content > .Container > .TpRwCont > main > article > header > .TPlayerCn.BgA > .EcBgA > .TPlayer').querySelectorAll('.TPlayerTb');
+    var episodeList = document.querySelector('.TPlayer').querySelectorAll('.TPlayerTb');
     
     for (var x = 0; x < episodeList.length; x++) {
         var episode = episodeList[x];
@@ -801,7 +801,6 @@ function Header(key,value) {
     }
 
     episodeObject = new EpisodeObject('','',headers,extraInfo,'','',output);
-    console.log(episodeObject);
     var finalJson = JSON.stringify(episodeObject);
     savedData.innerHTML = finalJson;
 
