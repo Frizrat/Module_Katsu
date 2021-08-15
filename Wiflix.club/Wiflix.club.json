@@ -55,7 +55,7 @@
   ],
   "search": [
     {
-      "request": "https://wiflix.re/index.php/search/?do=search&subaction=search&story=<searched>",
+      "request": "https://wiflix.re/index.php?story=<searched>&do=search&subaction=search",
       "method": "get",
       "headers": [
         {
