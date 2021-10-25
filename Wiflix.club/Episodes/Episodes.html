@@ -29,7 +29,6 @@
     }
 
     var savedData = document.getElementById('katsu-final-data');
-
     var parsedJson = JSON.parse(savedData.innerHTML); 
     
     var moduleID = '22020621';
@@ -39,10 +38,11 @@
     var episodeObject; 
     var output = [];
     
-    var type = document.querySelector('link[rel=canonical]').href;
+    var type = document.querySelector('h2.screenshots-title');
     
-    if (type != type.split('film')) {
-      var lecteurs = document.querySelector('.tabsbox.filmlinks.ignore-select > .tabs-sel.linkstab').querySelectorAll('a');
+    if (type != null) {
+      var lecteurs = document.querySelector('.tabs-sel.linkstab');
+      lecteurs = lecteurs.querySelectorAll('a');
       for (lecteur of lecteurs) {
         var link = lecteur.href.replace('/vd.php?u=', '');
         output.push(new Output(link,'',moduleID,'false',headers));
